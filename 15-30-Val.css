@@ -16,6 +16,7 @@ button{
   font-size: 250px;
   color: white;
 }
+
 #JAzul{
   background-color: blue;
   border: 2px solid black;
@@ -26,6 +27,7 @@ button{
   font-size: 250px;
   color: white;
 }
+
 #CRojo{
   background-color: red;
   width: 47%;
@@ -35,6 +37,7 @@ button{
   font-size: 250px;
   color: white;
 }
+
 #CAzul{
   background-color: blue;
   border: 2px solid black;
@@ -46,6 +49,7 @@ button{
   font-size: 250px;
   color: white;
 }
+
 #R1{
   background-color: red;
   border: 2px solid black;
@@ -56,6 +60,7 @@ button{
   font-size: 100px;
   color: white;
 }
+
 #A1{
   background-color: blue;
   border: 2px solid black;
@@ -66,12 +71,25 @@ button{
   font-size: 100px;
   color: white;
 }
+
 #Saque{
   background-color: yellow;
   border: 2px solid black;
-  width: 47%;
+  width: 23%;
   height: 19%;
   top: 40%;
+  font-family: Arial;
+  font-size: 250px;
+  color: black;
+}
+
+#Media{
+  background-color: #7f7a7a;
+  border: 2px solid black;
+  width: 23%;
+  height: 19%;
+  top: 40%;
+  left: 25.2%;
   font-family: Arial;
   font-size: 250px;
   color: black;

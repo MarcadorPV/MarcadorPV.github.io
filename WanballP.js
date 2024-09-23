@@ -1,6 +1,6 @@
 var CRojo = 0;
 var CAzul = 0;
-var SaqueRojo = 0;
+var SaqueRojo = 1;
 var SaqueAzul = 0;
 var CSaque =  0;
 var historial = [];
@@ -10,7 +10,9 @@ var PAzul = document.getElementById("PAzul");
 var Atras = document.getElementById("Anterior");
 var Saque = document.getElementById("Saque");
 
-
+window.addEventListener("load", function() {
+  guardarHistorial();
+});
 
 PRojo.addEventListener( "click", function(){
   CRojo++;
@@ -31,11 +33,16 @@ PAzul.addEventListener( "click", function(){
 Saque.addEventListener("click", function(){
   if (CSaque == 0) {
     CSaque = 1;
+    SaqueRojo = 0;
+    SaqueAzul = 1;
   }
   else if(CSaque == 1){
     CSaque = 0;
+    SaqueRojo = 1;
+    SaqueAzul = 0;
   }
   CoSaque();
+  guardarHistorial();
 });
 
 Atras.addEventListener("click", function(){
@@ -115,6 +122,9 @@ function CoSaque(){
   else if(CSaque == 1){
     Saque.style.backgroundColor = "#00fbff";
   }
+  else if(PRojo == 0 && PAzul == 0){
+    Saque.innerHTML = 1;
+  }
 };
 
 function guardarHistorial(){
@@ -128,26 +138,29 @@ function guardarHistorial(){
 };
 
 function anteriorHistorial(){
-  if (historial.length > 0) {
-    var ultimo = historial.pop();
-    CRojo = ultimo.CRojo;
-    CAzul = ultimo.CAzul;
-    SaqueRojo = ultimo.SaqueRojo;
-    SaqueAzul = ultimo.SaqueAzul;
-    CSaque = ultimo.CSaque;
-    
-    PRojo.innerHTML = CRojo;
-    PAzul.innerHTML = CAzul;
-    Saque.disabled = true;
-    Saque.style.backgroundColor = "gray";
-    if(CSaque == 0) {
-      Saque.innerHTML = SaqueRojo;
-      CoSaque();
-    }
-    else if(CSaque == 1){
-      Saque.innerHTML = SaqueAzul;
-      CoSaque();
-    };
+  if (historial.length > 1) {
+    historial.pop();
+    actualizarHistorial();
+  }
+  else{
+   guardarHistorial(); 
   };
 };
 
+function actualizarHistorial() {
+  var AN = historial.length - 1;
+  CRojo = historial[AN].CRojo;
+  CAzul = historial[AN].CAzul;
+  CSaque = historial[AN].CSaque;
+  SaqueRojo = historial[AN].SaqueRojo;
+  SaqueAzul = historial[AN].SaqueAzul;
+  PRojo.innerHTML = CRojo;
+  PAzul.innerHTML = CAzul;
+  CoSaque();
+  if (CSaque == 0) {
+    Saque.innerHTML = SaqueRojo;
+  }
+  else{
+    Saque.innerHTML = SaqueAzul;
+  };
+};

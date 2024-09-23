@@ -4,6 +4,7 @@ var PuntoRojo = 0;
 var PuntoAzul = 0;
 var QuinSaca = 1;
 var CSaque = 0;
+var hmedia = 0;
 
 var PRojo = document.getElementById("CRojo");
 var PAzul = document.getElementById("CAzul");
@@ -12,6 +13,7 @@ var JAzul = document.getElementById("JAzul");
 var R1 = document.getElementById("R1");
 var A1 = document.getElementById("A1");
 var Saque = document.getElementById("Saque");
+var Media = document.getElementById("Media");
 
 PRojo.addEventListener('click', function() {
   if (PuntoRojo == 0) {
@@ -117,6 +119,26 @@ Saque.addEventListener('click', function() {
   CoSaque();
 });
 
+Media.addEventListener('click', function(){
+  if (hmedia == 0){
+    hmedia = 1;
+    QMedia();
+  }
+  else if (hmedia == 1){
+    hmedia = 0;
+    QMedia();
+  }
+});
+
+function QMedia(){
+  if (hmedia == 0){
+    Media.style.backgroundColor = "#7f7a7a";
+  }
+  else if (hmedia == 1){
+    Media.style.backgroundColor = "yellow";
+  }
+}
+
 function puntorojo(){
   if (PuntoRojo == 0) {
     PRojo.innerHTML = 0;
@@ -153,6 +175,8 @@ function jocrojo(){
   PAzul.innerHTML = 0;
   saque();
   CoSaque();
+  hmedia = 0;
+  QMedia();
 };
 
 function jocazul(){
@@ -161,6 +185,8 @@ function jocazul(){
   PRojo.innerHTML = 0;
   saque();
   CoSaque();
+  hmedia = 0;
+  QMedia();
 };
 
 function saque(){
