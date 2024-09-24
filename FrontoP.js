@@ -80,10 +80,4 @@ function actualizarHistorial() {
   PRojo.innerHTML = CRojo;
   PAzul.innerHTML = CAzul;
   CoSaque();
-  if (CSaque == 0) {
-    Saque.innerHTML = SaqueRojo;
-  }
-  else{
-    Saque.innerHTML = SaqueAzul;
-  };
 };
