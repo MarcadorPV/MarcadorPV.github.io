@@ -7,13 +7,12 @@ body {
   color: white;
   border: 2px black solid;
   position: fixed;
-  width: 800px;
-  height: 500px;
-  top: 100px;
-  left: 100px;
+  width: 98%;
+  height: 40%;
+  top: 10px;
+  left: 10px;
   font-family: Arial;
   font-size: 300px;
-  border-radius: 50;
 }
 
 .BotonAzul {
@@ -21,13 +20,12 @@ body {
   color: white;
   border: 2px black solid;
   position: fixed;
-  width: 800px;
-  height: 500px;
-  top: 1000px;
-  left: 100px;
+  width: 98%;
+  height: 40%;
+  bottom: 10px;
+  left: 10px;
   font-family: Arial;
   font-size: 300px;
-  border-radius: 50;
 }
 
 .AtrasAzul {
@@ -35,13 +33,12 @@ body {
   color: white;
   border: 2px black solid;
   position: fixed;
-  width: 250px;
-  height: 300px;
-  top: 650px;
-  left: 650px;
+  width: 32%;
+  height: 18%;
+  top: 41%;
+  left: 67%;
   font-family: Arial;
   font-size: 200px;
-  border-radius: 50;
 }
 
 .AtrasRojo {
@@ -49,13 +46,12 @@ body {
   color: white;
   border: 2px black solid;
   position: fixed;
-  width: 250px;
-  height: 300px;
-  top: 650px;
-  left: 100px;
+  width: 32%;
+  height: 18%;
+  top: 41%;
+  left: 10px;
   font-family: Arial;
   font-size: 200px;
-  border-radius: 50;
 }
 
 .SaqueAlterno {
@@ -63,11 +59,10 @@ body {
   color: black;
   border: 2px black solid;
   position: fixed;
-  width: 250px;
-  height: 300px;
-  top: 650px;
-  left: 375px;
+  width: 32%;
+  height: 18%;
+  top: 41%;
+  left: 34%;
   font-family: Arial;
   font-size: 200px;
-  border-radius: 50;
 }
